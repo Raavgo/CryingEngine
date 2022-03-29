@@ -1,14 +1,16 @@
+#include <CryingEngine.h>
 
-#ifdef __linux__
-#define __declspec(v)
-#endif
+class Sandbox : public CryingEngine::Application {
+public:
+	Sandbox() {
 
+	}
 
-namespace Engine {
-    __declspec(dllimport) void printWelcome();
-}
+	~Sandbox() {
 
-int main(){
-    Engine::printWelcome();
-    return 0;
+	}
+};
+
+CryingEngine::Application* CryingEngine::CreateApplication() {
+	return new Sandbox();
 }
