@@ -1,0 +1,3 @@
+[submodule "CryingEngine/vendor/spdlog"]
+	path = CryingEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
