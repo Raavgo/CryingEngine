@@ -18,6 +18,9 @@ project "CryingEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "cepch.h"
+	pchsource "CryingEngine/src/cepch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
