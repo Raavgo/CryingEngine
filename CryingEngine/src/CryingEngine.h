@@ -1,7 +1,8 @@
 #pragma once
 
-#include <stdio.h>
+//For CryingEngine Application
 #include "Engine/Application.h"
+#include "Engine/Log.h"
 
 //Entrypoint
 #include "Engine/EntryPoint.h"
