@@ -1,3 +1,12 @@
 [submodule "CryingEngine/vendor/spdlog"]
 	path = CryingEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+
+
+
+[submodule "CryingEngine/vendor/GLFW__"]
+	path = CryingEngine/vendor/GLFW__
+	url = https://github.com/TheCherno/glfw.git
+[submodule "CryingEngine/vendor/_GLFW"]
+	path = CryingEngine/vendor/_GLFW
+	url = https://github.com/Raavgo/glfw.git

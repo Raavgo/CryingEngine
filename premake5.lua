@@ -10,6 +10,11 @@ workspace "CryingEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "CryingEngine/vendor/_GLFW/include"
+
+include "CryingEngine/vendor/_GLFW"
+
 project "CryingEngine"
 	location "CryingEngine"
 	kind "SharedLib"
@@ -30,7 +35,14 @@ project "CryingEngine"
 	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -107,3 +119,4 @@ project "Sandbox"
 	filter "configurations:Dist"
 		defines "CE_DIST"
 		optimize "On"
+
